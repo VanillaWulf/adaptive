@@ -1,0 +1,31 @@
+.unity {
+    background: linear-gradient(180deg, #170F39 0%, #342062 100%);
+    padding: 64px 0 128px;
+    color: $white-color;
+
+    .unity__item {
+        width: 100%;
+        min-height: 288px;
+        background: url("../../img/game-img.png") no-repeat;
+        background-size: cover;
+        margin: 0 0 16px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .unity {
+        .unity__item {
+            min-height: 320px;
+            margin: 0 0 16px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .unity {
+        .unity__list {
+            display: flex;
+        }
+    }
+}

@@ -41,6 +41,10 @@ table {
 	border-spacing: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -54,13 +58,28 @@ table {
 
 body {
     font-family: 'Lato', 'Arial', sans-serif;
-    font-size: 30px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
-    line-height: 36px;
+    line-height: 24px;
 }
 
 .container {
-    width: 1140px;
-    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.main-container {
+    padding: 0 16px;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    color: $white-color;
+} 
+
+@media (min-width: 768px) {
+    .main-container {
+        padding: 0 64px;
+    }
 }

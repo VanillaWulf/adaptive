@@ -1,42 +1,87 @@
 .header {
-    background-color: $black-color;
-
-    .header__container {
-
-        @include flex-center-space-between;
-        min-height: 75px;
-    }
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    min-height: 80px;
+    align-items: center;
+    padding: 0 16px 0 26px;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
 
     .header__logo {
-        margin: 0 41px 0 0;
+        color: $white-color;
+    }
+
+    .header__navigation {
+        overflow: hidden;
+    }
+
+    .header__navigation-container {
+        position: absolute;
+        display: none;
+        width: 100%;
+        height: 100vh;
+        background-color: blue;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .header__navigation-link {
+        color: $white-color;
+        display: block;
+        margin: 0 0 10px;
+    }
+
+
+    .header__navigation-container--shown {
+        display: block;
     }
 
     .header__button {
-        background-color: transparent;
-        border: none;
+        color: $white-color;
+    }
 
-        &:hover,
-        &:focus {
-            opacity: .8;
+    .header__button--close {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        justify-content: start;
+
+        .header__navigation-container {
+            display: block;
+            position: relative;
+            height: auto;
+            background: transparent;
         }
 
-        &:active {
-            opacity: .5;
+        .header__navigation-list {
+            display: flex;
+        }
+
+        .header__logo {
+            margin: 0 10px 0 0;
+        }
+
+        .header__navigation-link {
+            display: flex;
+            margin: 0 10px 0 0;
+        }
+
+        .header__button {
+            display: none;
         }
     }
+}
 
-    .header__menu-list,
-    .header__logo-container {
-        display: flex;
-        align-items: center;
+@media (min-width: 1366px) {
+    .header {
+        display: none;
     }
-
-    .header__item {
-        @include font(24px, 29px);
-    }
-
-    .header__menu-item:not(:last-of-type) {
-        margin: 0 34px 0 0;
-    }
-
 }

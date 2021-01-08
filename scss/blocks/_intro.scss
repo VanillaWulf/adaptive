@@ -1,0 +1,83 @@
+.intro {
+    color: $white-color;
+    padding: 164px 0 0 0;
+    min-height: 867px;
+    box-sizing: border-box;
+    text-align: center;
+    background: url(../../img/ellipse-purple.png) -10% -10%/30% no-repeat,
+        url(../../img/girl-gamepad.png) center bottom/ 70% no-repeat, 
+        url(../../img/ellipse-blue.png) 100% 90%/60% no-repeat, 
+        linear-gradient(270deg, #332061 0%, #43135A 100%);
+
+    .intro__age {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 28px;
+        color: $blue-color;
+        border: 2px solid $blue-color;
+        margin: 0 0 27px 0;
+        padding: 4px 8px;
+        border-radius: 2px;
+    }
+
+    .intro__competiotion {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 28px;
+    }
+
+    .intro__header {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0 0 16px;
+    }
+
+    .intro__button {
+        background-color: $blue-color;
+        width: 200px;
+        min-height: 48px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .intro {
+        text-align: left;
+
+        background: url(../../img/ellipse-purple.png) -10% -10%/30% no-repeat, 
+        url(../../img/ellipse-blue.png) 100% 90%/60% no-repeat, 
+        linear-gradient(270deg, #332061 0%, #43135A 100%);
+
+        .intro__age {
+            margin: 0 16px 0 0;
+        }
+
+        .intro__description {
+            display: flex;
+            align-items: center;
+            margin: 0 0 24px;
+        }
+
+        .intro__header {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 40px;
+            line-height: 48px;
+            width: 47%;
+        }
+
+        .intro__text {
+            width: 46%;
+            margin: 0 0 24px;
+        }
+
+        .intro__button {
+            display: flex;
+        }
+    }
+}
